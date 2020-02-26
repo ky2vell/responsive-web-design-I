@@ -160,14 +160,18 @@ header {
     padding-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+}
+header img, .home-link {
+    margin-left: auto;
 }
 nav {
     display: flex;
+    width: 65%;
+    justify-content: space-between;
 }
 nav a {
     text-decoration: none;
-    padding: 20px;
+    padding: 20px 0;
     color: gray;
     font-size: 15px;
 }
@@ -196,6 +200,14 @@ nav a:hover {
 
 /*** Content ***/
 
+section.page-description {
+    padding: 2% 0;
+}
+
+section.page-description h1 {
+    font-size: 30px;
+}
+
 section.middle-content {
     display: flex;
     flex-wrap: wrap;
@@ -221,6 +233,52 @@ section.middle-content {
     width: 100%;
 }
 
+.services-header-img {
+    background: url(../img/services-header.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+    margin: 2% 0;
+}
+
+section.middle-content .box {
+    width: 48%;
+    padding: 2%;
+    margin: 2% 0;
+    border: 1px solid black;
+    background: #efefef;
+}
+section.middle-content .box p {
+    margin-bottom: 20px;
+}
+section.middle-content .box a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    font-size: 13px;
+    background: #f7f7f7;
+    padding: 8px 30px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.facts {
+    display: flex;
+    padding-top: 2%;
+    justify-content: space-between;
+}
+.facts div p {
+    padding-right: 30px;
+}
+.facts ul {
+    list-style: square;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+.facts li {
+    margin-bottom: 10px;
+}
+
 /*** Footer ***/
 
 footer .copyright {
@@ -244,6 +302,14 @@ footer .copyright {
         order: -1;
         margin: 20px 0;
     }
+    .home-link {
+        order: -1;
+        margin: 0; 
+    }
+    nav {
+        width: 100%;
+        justify-content: space-around;
+    }
     .hero {
         flex-direction: column;
         padding: 30px 0 50px;
@@ -253,6 +319,9 @@ footer .copyright {
     }
     .text-container {
         padding: 30px 2%;
+    }
+    .facts img {
+        display: none;
     }
 }
 
@@ -277,5 +346,12 @@ footer .copyright {
     }
     .text-container.col-2, .text-container.col-3 {
         width: 100%;
+    }
+    .services-header-img {
+        margin: 10% 0;
+    }
+    section.middle-content .box {
+        width: 100%;
+        padding: 4% 2%;
     }
 }
